@@ -8,8 +8,8 @@ y_index = 0.1:0.1:3;
 
 xtr = rand(ntr,1);
 for i = 1:ntr
-%     ytr(i,:) = xtr(i) .* sin(xtr(i) .* y_index) + rand(1,length(y_index))*0.1;
-    ytr(i,:) = xtr(i) .* sin(xtr(i) .* y_index);
+    ytr(i,:) = xtr(i) .* sin(xtr(i) .* y_index) + rand(1,length(y_index))*0.05;
+%     ytr(i,:) = xtr(i) .* sin(xtr(i) .* y_index);
 end
 
 
@@ -19,8 +19,8 @@ for i = 1:nte
 end
 
 
-model = hogp(xtr, ytr, xte, 1);
-% model2 = hogp(xtr, ytr, xte, 1, {'ard','linear'});
+model = hogp(xtr, ytr, xte, 6);
+% model2 = hogp(xtr, ytr, xte, 6, {'ard','linear'});
 
 %% plot
 figure(1)
