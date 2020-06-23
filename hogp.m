@@ -14,9 +14,6 @@
 % Outputs:
 % model
 % 
-% Author: Wei Xing 
-% email address: wayne.xingle@gmail.com
-% Last revision: 23-Jun-2020
 
 function model = hogp(xTr, yTr, xTe, rank, Kernel)
     %% default using normalization for x and y
